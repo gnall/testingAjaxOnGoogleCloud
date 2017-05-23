@@ -71,6 +71,7 @@ function fire_ajax_submit() {
     var app = {
         // Application Constructor
         initialize: function () {
+        	console.log("test1");
             this.bindEvents();
         },
         // Bind Event Listeners
@@ -78,6 +79,7 @@ function fire_ajax_submit() {
         // Bind any events that are required on startup. Common events are:
         // 'load', 'deviceready', 'offline', and 'online'.
         bindEvents: function () {
+        	console.log("test2");
             document.addEventListener('deviceready', this.onDeviceReady, false);
 
         },
@@ -86,6 +88,7 @@ function fire_ajax_submit() {
         // The scope of 'this' is the event. In order to call the 'receivedEvent'
         // function, we must explicitly call 'app.receivedEvent(...);'
         onDeviceReady: function () {
+        	console.log("test3");
             app.receivedEvent('deviceready');
             // Test these plugins from buttons since they require interaction
             document.getElementById("orientationBtn").onclick = app.testDeviceOrientation;
@@ -106,12 +109,14 @@ function fire_ajax_submit() {
         },
         // Update DOM on a Received Event
         receivedEvent: function (id) {
+        	console.log("test4");
             console.log('Received Event: ' + id);
             var log = document.getElementById("log");
             log.setAttribute('style', 'display:block;width: 95%;height: 320px; position: absolute; top: 300px; left: 5px; right:5px; ');
             log.value+="DEVICE READY FIRED!!!\n\n";
         },
         testConnection: function () {
+        	console.log("test5");
             var networkState = navigator.connection.type;
 
             var states = {};
@@ -213,6 +218,7 @@ function fire_ajax_submit() {
 
         },
         testInAppBrowser: function () {
+        	console.log("test7");
             /* Must have app transport settings set to arbitrary load to yes in the Info.plist for your project to allow this
              <key>NSAppTransportSecurity</key>
               <dict>
@@ -229,6 +235,7 @@ function fire_ajax_submit() {
             log.value+="SplashScreen test " + navigator.splashscreen +"\n";
         },
         testCamera: function () {
+        	console.log("test8");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 50,
                 destinationType: Camera.DestinationType.DATA_URL,
