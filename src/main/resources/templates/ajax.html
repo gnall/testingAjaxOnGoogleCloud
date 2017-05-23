@@ -54,10 +54,34 @@
     </footer>
 </div>
 
-<script type="text/javascript"
-        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/main.js"></script>
-
+<div>
+            <img id="myImage" width="100" height="100"  style="position: absolute; top: 3px; left: 3px; display:none"></img>
+            <div id="buttons">
+                <h3>Core Plugin Tests</h3>
+                <button id="deviceBtn">Device</button>
+                <button id="compassBtn">Motion</button>
+                <button id="orientationBtn">Orientation</button>
+                <button id="cameraBtn">Camera</button>
+                <button id="contactsBtn">Contacts</button>
+                <button id="geoBtn">Geolocation</button>
+                <button id="globalBtn">Globalization</button>
+                <button id="mediaBtn">Media Capture</button>
+                <button id="networkBtn">Network Info</button>
+                <button id="browserBtn">InAppBrowser</button>
+                <button id="statusbarBtn">Statusbar</button>
+                <button id="splashscreenBtn">SplashScreen</button>
+                <button id="vibrateBtn">Vibration</button>
+                <button id="filetransferBtn">File Transfer</button>
+                <button id="fileBtn">File</button>
+            </div>
+            <div class="scroll">
+                <textarea id="log" readonly="readonly"></textarea>
+            </div>
+</div>
+        <script type="text/javascript" src="js/cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
