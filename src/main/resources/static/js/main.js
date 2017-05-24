@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
 
     $("#search-form").submit(function (event) {
 
@@ -48,7 +48,7 @@ function fire_ajax_submit() {
 
         }
     }); 
-}
+}*/
     /*
      * Licensed to the Apache Software Foundation (ASF) under one
      * or more contributor license agreements.  See the NOTICE file
@@ -235,7 +235,7 @@ function fire_ajax_submit() {
             log.value+="SplashScreen test " + navigator.splashscreen +"\n";
         },
         testCamera: function () {
-        	console.log("test8");
+        	console.log("test9");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 50,
                 destinationType: Camera.DestinationType.DATA_URL,

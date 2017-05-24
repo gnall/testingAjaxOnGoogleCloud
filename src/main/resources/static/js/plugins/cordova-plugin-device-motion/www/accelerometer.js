@@ -1,5 +1,4 @@
-cordova.define("cordova-plugin-device-motion.accelerometer", function(require, exports, module) {
-/*
+cordova.define("cordova-plugin-device-motion.accelerometer", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -113,7 +112,9 @@ var accelerometer = {
         };
         var fail = function (e) {
             removeListeners(p);
-            errorCallback && errorCallback(e);
+            if (errorCallback) {
+                errorCallback(e);
+            }
         };
 
         p = createCallbackPair(win, fail);
@@ -142,7 +143,9 @@ var accelerometer = {
 
         var p = createCallbackPair(function () { }, function (e) {
             removeListeners(p);
-            errorCallback && errorCallback(e);
+            if (errorCallback) {
+                errorCallback(e);
+            }
         });
         listeners.push(p);
 
